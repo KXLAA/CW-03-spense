@@ -385,6 +385,9 @@ select {
 .header {
   background-color: #F0EEEB;
   padding-bottom: 4rem;
+  /**************************/
+  /* BELOW 480px (Mobile) */
+  /**************************/
 }
 .header__pop-up {
   display: flex;
@@ -407,6 +410,11 @@ select {
   cursor: pointer;
   padding: 0rem;
   margin: 0rem;
+}
+@media screen and (max-width: 30rem) {
+  .header {
+    margin-bottom: 4rem;
+  }
 }
 
 .hero {
@@ -538,9 +546,17 @@ select {
   justify-content: space-between;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  /**************************/
+  /* BELOW 480px (Mobile) */
+  /**************************/
 }
 .featured__logo {
   width: 9.5%;
+}
+@media screen and (max-width: 30rem) {
+  .featured {
+    display: none;
+  }
 }
 
 .how-it-works {

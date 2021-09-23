@@ -24,6 +24,14 @@
         padding: 0rem;
         margin: 0rem;
     }
+    
+    /**************************/
+    /* BELOW 480px (Mobile) */
+    /**************************/
+
+    @include respond-to(xs){
+        margin-bottom: 4rem;
+    }
 }
 
 .hero{
@@ -113,7 +121,6 @@
     /**************************/
     /* BELOW 480px (Mobile) */
     /**************************/
-
     &__heading{
         @include respond-to(xs){
             @include heading(secondary);

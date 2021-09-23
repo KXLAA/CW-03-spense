@@ -7,4 +7,13 @@
     &__logo{
         width: 9.5%;
     }
+
+    /**************************/
+    /* BELOW 480px (Mobile) */
+    /**************************/
+
+     @include respond-to(xs){
+        display: none;
+    }
+
 }
