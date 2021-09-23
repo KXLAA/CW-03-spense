@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/KXLAA/CW-03-spense)
-- Live Site URL: [Live Preview](https://kxlaa.github.io/CW-02-fiber/)
+- Live Site URL: [Live Preview](https://kxlaa.github.io/CW-03-spense/)
 
 
 ## My process
