@@ -31,6 +31,7 @@ Users should be able to:
 - Solution URL: [Github Repo](https://github.com/KXLAA/CW-03-spense)
 - Live Site URL: [Live Preview](https://kxlaa.github.io/CW-02-fiber/)
 
+
 ## My process
 
 ### Built with
@@ -42,7 +43,7 @@ Users should be able to:
 
 
 ### What I learned
-Another fantastic challenge from codewell. The implementation of the design in code was quite straight forward, good practice for responsive layouts. I implemented my scss Media queries differently in this project to make them more maintainable:
+Another fantastic challenge from codewell. The implementation of the design in code was quite straight forward, it provided good practice for responsive layouts. I implemented my scss Media queries differently in this project to make them more maintainable:
 
 ```scss
     /**************************/
