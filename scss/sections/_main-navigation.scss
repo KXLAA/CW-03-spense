@@ -1,0 +1,131 @@
+.hidden{
+    display: none !important;
+}
+
+
+.nav{
+    @include flex-center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-top: 2.5rem;
+
+    &__main{
+        @include flex-center;
+    }
+
+    &__col{
+        @include flex-center;
+        list-style: none;
+    }
+
+    &__items{
+        margin-left: 2rem;
+    }
+
+    &__items:nth-child(1){
+        margin-left: 0rem;
+    }
+
+    &__cta{
+        margin-left: 10rem; 
+
+    }
+
+    &__btn{
+        margin-left: 2rem;
+
+    }
+
+
+    /**************************/
+    /*      MOBILE NAV        */
+    /**************************/
+    
+    &__mobile-bg{                                  
+        @include respond-to(sm){
+            @include flex-center-column;
+            @include body(bold--lg);
+            background-color: $mobile-nav-bg-color;
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100vh;
+            transition: all 0.5s ease-in;
+            opacity: 0; 
+            pointer-events: none;
+            visibility: hidden;
+        }
+    }
+
+    //Mobile Nav MQ
+
+    &__col{
+        @include respond-to(sm){
+            @include flex-center-column;
+        }        
+    }
+
+    &__items{
+        @include respond-to(sm){
+            @include flex-center-column;
+            margin-left: 0rem;
+            margin-bottom: 1.5rem;
+        } 
+    }
+
+    &__cta{
+        @include respond-to(sm){
+            margin-left: 0rem;
+        }  
+    }
+
+    &__btn{
+        @include respond-to(sm){
+            margin-left: 0rem;
+        }   
+    }
+
+    &__mobile{
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: none;
+        padding: 0rem;
+        margin: 0rem;
+
+        @include respond-to(sm){
+            display: block;
+        } 
+    }
+
+    &__mobile-icon{
+        width: 3.5rem;
+        height: 3.5em;
+    
+    }
+
+    &__mobile-icon[name="close-sharp"]{
+        display: none;
+    }
+
+    &__open &__mobile-icon[name="close-sharp"]{
+        display: block;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__open &__mobile-icon[name="menu-sharp"]{
+        display: none;
+    }
+
+    &__open &__mobile-bg{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+    
+}
+
+

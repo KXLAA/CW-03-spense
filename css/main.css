@@ -1,0 +1,735 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default styles on links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs */
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.heading--primary {
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #292929;
+  font-size: 3.5rem;
+  line-height: 4.25rem;
+}
+
+.heading--secondary {
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #292929;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+.heading--third {
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #292929;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+}
+
+.heading--footer {
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #292929;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.heading--logo {
+  font-family: "Cabin", sans-serif;
+  font-weight: 700;
+  color: #292929;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+  color: #000000;
+}
+
+.body--main {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5A5444;
+}
+
+.body--bold {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #5A5444;
+}
+
+.body--link {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #5A5444;
+  text-decoration: underline;
+}
+
+.body--link-w {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #5A5444;
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+.footer--main {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5A5444;
+  color: #9E9E9E;
+}
+
+.footer--bold {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #5A5444;
+  color: #9E9E9E;
+}
+
+.button--primary {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  padding: 1.125rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #FFFFFF;
+  background: #000000;
+}
+.button--primary:hover {
+  background: black;
+  transform: translateX(0rem) translateY(-0.3125rem);
+}
+.button--primary:active {
+  background: black;
+  transform: translateX(0rem) translateY(0.125rem);
+}
+
+.button--secondary {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  padding: 1.125rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #FFFFFF;
+  background: #000000;
+}
+.button--secondary:hover {
+  background: black;
+  transform: translateX(0rem) translateY(-0.3125rem);
+}
+.button--secondary:active {
+  background: black;
+  transform: translateX(0rem) translateY(0.125rem);
+}
+
+.button--full-width {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  padding: 1.125rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block !important;
+  width: 100% !important;
+}
+
+.layout__container {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 0rem 5.625rem 0rem 5.625rem;
+}
+@media screen and (max-width: 62rem) {
+  .layout__container {
+    padding: 0rem 2.5rem 0rem 2.5rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .layout__container {
+    padding: 0rem 1.5rem 0rem 1.5rem;
+  }
+}
+@media screen and (max-width: 22rem) {
+  .layout__container {
+    padding: 0rem 1rem 0rem 1rem;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  /**************************/
+  /*      MOBILE NAV        */
+  /**************************/
+}
+.nav__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.nav__items {
+  margin-left: 2rem;
+}
+.nav__items:nth-child(1) {
+  margin-left: 0rem;
+}
+.nav__cta {
+  margin-left: 10rem;
+}
+.nav__btn {
+  margin-left: 2rem;
+}
+@media screen and (max-width: 48rem) {
+  .nav__mobile-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #5A5444;
+    background-color: rgba(255, 255, 255, 0.97);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .nav__col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .nav__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .nav__cta {
+    margin-left: 0rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .nav__btn {
+    margin-left: 0rem;
+  }
+}
+.nav__mobile {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  padding: 0rem;
+  margin: 0rem;
+}
+@media screen and (max-width: 48rem) {
+  .nav__mobile {
+    display: block;
+  }
+}
+.nav__mobile-icon {
+  width: 3.5rem;
+  height: 3.5em;
+}
+.nav__mobile-icon[name=close-sharp] {
+  display: none;
+}
+.nav__open .nav__mobile-icon[name=close-sharp] {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+.nav__open .nav__mobile-icon[name=menu-sharp] {
+  display: none;
+}
+.nav__open .nav__mobile-bg {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.header {
+  background-color: #F0EEEB;
+  padding-bottom: 4rem;
+}
+.header__pop-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 1rem 2.5rem;
+  transition: all 750ms ease-in-out;
+}
+.header__cancel-icon {
+  margin-right: 1rem;
+  height: 1.7rem;
+  width: 1.7rem;
+  color: #FFFFFF;
+}
+.header__cancel-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /**************************/
+  /* BELOW 768px (Tablet) */
+  /**************************/
+  /**************************/
+  /* BELOW 480px (Mobile) */
+  /**************************/
+}
+.hero__txt-box {
+  margin-right: 6rem;
+}
+.hero__heading {
+  margin-bottom: 0.5rem;
+}
+.hero__description {
+  margin-bottom: 1rem;
+}
+.hero__list {
+  list-style: none;
+}
+.hero__list-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.hero__list-box:nth-child(3) {
+  margin-bottom: 2rem;
+}
+.hero__list-item {
+  margin-left: 1rem;
+}
+.hero__input {
+  padding: 1.125rem 1.5rem;
+  text-align: left;
+  border: 1px solid #B1B1B1;
+  border-radius: 5px;
+  color: #9E9E9E;
+  margin-right: 1rem;
+}
+.hero__img-box {
+  width: 100%;
+}
+.hero__img--tablet {
+  display: none;
+}
+.hero__img--mobile {
+  display: none;
+}
+@media screen and (max-width: 48rem) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .hero__img--desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .hero__img--tablet {
+    display: block;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .hero__txt-box {
+    margin-right: 0rem;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .hero__heading {
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    color: #292929;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .hero__img--desktop, .hero__img--tablet {
+    display: none;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .hero__img--mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .hero__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .hero__input {
+    margin-right: 0rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .hero__btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    padding: 1.125rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block !important;
+    width: 100% !important;
+  }
+}
+
+.featured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.featured__logo {
+  width: 9.5%;
+}
+
+.how-it-works {
+  margin-bottom: 4rem;
+}
+
+.card {
+  background-color: #F0EEEB;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  padding-left: 4.5rem;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
+  /**************************/
+  /* BELOW 768px (Tablet) */
+  /**************************/
+  /**************************/
+  /* BELOW 352px (Small Mobile) */
+  /**************************/
+}
+.card__heading {
+  margin-bottom: 1rem;
+}
+.card__txt-box {
+  padding-bottom: 2rem;
+}
+.card__link {
+  padding-top: 1rem;
+}
+.card__img-box {
+  width: 150%;
+}
+.card__img--desktop {
+  width: 100%;
+  padding-right: 4.5rem;
+  padding-left: 4.5rem;
+}
+.card__img--tablet {
+  display: none;
+}
+@media screen and (max-width: 48rem) {
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    padding-bottom: 0rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .card__img-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .card__img--tablet {
+    display: block;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .card__img--desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .card {
+    padding: 2rem;
+    padding-top: 3rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .card__img--tablet {
+    display: none;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .card__heading {
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    color: #292929;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+.card-2 {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  /**************************/
+  /* BELOW 768px (Tablet) */
+  /**************************/
+  /**************************/
+  /* BELOW 480px (Mobile) */
+  /**************************/
+}
+.card-2__heading {
+  margin-bottom: 1rem;
+}
+.card-2__img-box {
+  width: 100%;
+}
+.card-2__link {
+  padding-top: 1rem;
+}
+@media screen and (max-width: 48rem) {
+  .card-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .card-2__heading {
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    color: #292929;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+.footer {
+  background-color: #000000;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  /**************************/
+  /* BELOW 768px (Tablet) */
+  /**************************/
+  /**************************/
+  /* BELOW 480px (Mobile) */
+  /**************************/
+}
+.footer__container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+.footer__col {
+  list-style: none;
+}
+.footer__col--large {
+  width: 35%;
+}
+.footer__copyright {
+  padding-top: 2rem;
+}
+.footer__logo, .footer__heading {
+  margin-bottom: 1rem;
+}
+.footer__link {
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 48rem) {
+  .footer__container {
+    flex-wrap: wrap;
+    justify-content: initial;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .footer__col--large {
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .footer__col--large {
+    flex: 100%;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .footer__col {
+    flex: 30%;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .footer__col:nth-child(2) {
+    flex: 30%;
+    order: 2;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .footer__col:nth-child(3) {
+    flex: 30%;
+    order: 2;
+  }
+}/*# sourceMappingURL=main.css.map */

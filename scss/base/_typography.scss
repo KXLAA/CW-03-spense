@@ -1,0 +1,140 @@
+/// **** HEADINGS FONT STYLES **** ///
+
+$heading-fs: (
+  h1: $h1-font-size, //  56px
+  h2: $h2-font-size, //  36px
+  h3: $h3-font-size //  20px
+)!default;
+
+$heading-line-height: (
+  h1-lh: $h1-line-height, //  68px
+  h2-lh: $h2-line-height, //  44px
+  h3-lh: $h3-line-height //  24px
+)!default;
+
+
+@mixin heading-base{
+    font-family: $heading-sans-serif;
+    font-weight: $font-weight-bold;
+    color: $heading-color; 
+}
+
+@mixin heading($style) {
+    @if $style == "primary" {
+        @include heading-base;
+        font-size: map-get($heading-fs, h1);
+        line-height: map-get($heading-line-height, h1-lh);
+    }
+
+    @else if $style == "secondary" {
+        @include heading-base;
+        font-size: map-get($heading-fs, h2);
+        line-height: map-get($heading-line-height, h2-lh);
+    }
+
+    @else if $style == "third" {
+      @include heading-base;
+      font-size: map-get($heading-fs, h3);
+      line-height: map-get($heading-line-height, h3-lh);
+      color: $footer-heading-color
+  }
+
+}
+
+
+// ===== Usage ===== //
+.heading--primary{
+  @include heading(primary);
+}
+
+.heading--secondary{
+  @include heading(secondary);
+}
+
+.heading--third{
+  @include heading(third);
+}
+
+.heading--footer{
+  @include heading(third);
+  color: $footer-heading-color;
+}
+
+.heading--logo{
+  @include heading(third);
+  color: $header-logo-color;
+}
+
+
+/// **** BODY FONT STYLES **** ///
+
+$body-fs: (
+  base: $font-size-base,        // 16px
+  sm: $font-size-sm,            // 14px
+  md:  $font-size-md,           // 18px
+  lg:  $font-size-lg           //  20px
+)!default;
+  
+  
+@mixin body-base{
+  font-family: $body-sans-serif;
+  font-size: map-get($body-fs, md);
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+}
+
+
+@mixin body($style) {
+  @if $style == "main" {
+    @include body-base;
+    color: $body-main-color;
+  }
+
+  @else if $style == "bold" {
+    @include body-base;
+    font-weight:$font-weight-bold;
+    color: $body-main-color;
+  }
+
+  @else if $style == "bold--lg" {
+    @include body-base;
+    font-weight:$font-weight-bold;
+    font-size: map-get($body-fs, lg);
+    color: $body-main-color;
+  }
+}
+
+// ===== Usage ===== //
+
+.body--main{
+  @include body(main);
+}
+
+.body--bold{
+  @include body(bold);
+}
+
+.body--link{
+  @include body(bold);
+  text-decoration: underline;
+}
+
+.body--link-w{
+  @include body(bold);
+  text-decoration: underline;
+  color: $body-link-color;
+}
+
+.footer--main{
+  @include body(main);
+  color: $footer-txt-color;
+}
+
+.footer--bold{
+  @include body(bold);
+  color: $footer-txt-color;
+}
+
+
+
+

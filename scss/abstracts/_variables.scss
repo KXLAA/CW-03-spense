@@ -1,0 +1,92 @@
+/// **** FONT VARIABLES **** ///
+
+//Font family
+$body-sans-serif: 'Source Sans Pro', sans-serif;
+$heading-sans-serif: 'Cabin', sans-serif;
+
+
+
+//Body Font Sizes
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875;   // 14px
+$font-size-md:                $font-size-base * 1.125;  // 18px
+$font-size-lg:                $font-size-base * 1.25;  //  20px
+
+
+
+//Body Line Heights
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+
+
+//Heading Font Sizes
+$h1-font-size:                3.5rem;              //  56px
+$h2-font-size:                2.25rem;             //  36px
+$h3-font-size:                1.25rem;             //  20px
+
+//Heading Line Heights
+$h1-line-height:                4.25rem;              //  68px
+$h2-line-height:                2.75rem;              //  44px
+$h3-line-height:                1.5rem;                // 24px
+
+
+//Font Weights
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+
+/// **** COLORS VARIABLES  **** ///
+
+// Descriptive naming
+$color-black:#000000;
+$color-white:#FFFFFF;
+$color-cararra: #F0EEEB;
+$color-mineshaft:#292929;
+$color-soyabean:#5A5444;
+$color-silver-chalice: #9E9E9E;
+$color-mok:rgba(255, 255, 255, 0.97);
+
+
+
+
+// Functional naming
+$button-primary-color:$color-white;
+$button-primary-bg-color:$color-black;
+$button-secondary-color:$color-white;
+$button-secondary-bg-color:$color-black;
+$header-bg-color:$color-cararra;
+$footer-bg-color:$color-black;
+$header-logo-color: $color-black;
+
+$card-bg-color:$color-cararra;
+$footer-txt-color:$color-silver-chalice;
+$body-main-color: $color-soyabean;
+$body-link-color:$color-white;
+$heading-color:$color-mineshaft;
+$footer-heading-color:$color-white;
+$pop-up-txt-color:$color-white;
+$placeholder-txt-color:$color-silver-chalice;
+$mobile-nav-bg-color:$color-mok;
+$pop-up-btn-color:$color-white;
+
+
+
+
+
+
+
+/// **** SHADOWS VARIABLES  **** ///
+
+$shadows: (
+    none: none,
+    inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+    outline: "0 0 0 3px rgba(0, 0, 0, 0.5)",
+    xs: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    sm: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    md: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    lg: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+    xl: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+) !default;

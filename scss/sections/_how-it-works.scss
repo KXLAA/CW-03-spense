@@ -1,0 +1,149 @@
+.how-it-works{
+    margin-bottom: 4rem;
+}
+
+
+.card{
+    background-color: $card-bg-color;
+    border-radius: .625rem;
+    @include flex-center-vert;
+    padding-left: 4.5rem;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+
+
+    &__heading{
+        margin-bottom: 1rem;
+    }
+
+    &__txt-box{
+        padding-bottom: 2rem;
+    }
+
+    &__link{
+        padding-top: 1rem;
+
+    }
+   
+    &__img-box{
+        width: 150%;
+    }
+
+    &__img--desktop{
+        width: 100%;
+        padding-right: 4.5rem;
+        padding-left: 4.5rem;
+    }
+
+    &__img--tablet{
+        display: none;
+    }
+
+    /**************************/
+    /* BELOW 768px (Tablet) */
+    /**************************/
+    @include respond-to(sm){
+        @include flex-center-column;
+        padding: 4rem;
+        padding-bottom: 0rem;
+    }
+
+    &__img-box{
+        @include respond-to(sm){
+           width: 100%;
+        }
+    }
+
+    &__img--tablet{
+        @include respond-to(sm){
+            display: block;
+        }
+    }
+
+    &__img--desktop{
+        @include respond-to(sm){
+            display: none;
+        }
+    }
+
+    /**************************/
+    /* BELOW 352px (Small Mobile) */
+    /**************************/
+    @include respond-to(xs){
+        padding: 2rem;
+        padding-top: 3rem;
+        
+    }
+
+    &__img--tablet{
+        @include respond-to(xs){
+            display: none;
+        }
+    }
+
+    &__heading{
+        @include respond-to(xs){
+            @include heading(secondary);
+        }
+        
+    }
+
+  
+
+    
+
+
+
+
+
+
+
+
+}
+
+
+.card-2{
+    background-color: $color-white;
+    @include flex-center-vert;
+    padding: 1rem;
+
+    &__heading{
+        margin-bottom: 1rem;
+    }
+    &__img-box{
+        width: 100%;
+    }
+
+    &__link{
+        padding-top: 1rem;
+    }
+
+
+    /**************************/
+    /* BELOW 768px (Tablet) */
+    /**************************/
+
+    @include respond-to(sm){
+        @include flex-center-column;
+        flex-direction: column-reverse;
+    }
+
+    /**************************/
+    /* BELOW 480px (Mobile) */
+    /**************************/
+
+    &__heading{
+        @include respond-to(xs){
+            @include heading(secondary);
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
